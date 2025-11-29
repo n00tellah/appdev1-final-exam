@@ -1,29 +1,21 @@
-export const getTodosAPI = function () {
-    return fetch(`https://jsonplaceholder.typicode.com/todos?_limit=10`)
-    .then(res => res.json())
-}
+import axios from "axios";
 
-export const addTodoAPI = function (todo) {
-    return fetch(`https://jsonplaceholder.typicode.com/todos`, {
-        method: "POST",
-        body: JSON.stringify(todo),
-        headers: { "Content-Type": "application/json" }
-    })
-    .then(res => res.json())
-}
+export const getTodosAPI = () => {
+  return axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+    .then(res => res.data);
+};
 
-export const updateTodoAPI = function(todo) {
-    return fetch(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, {
-        method: "PUT",
-        body: JSON.stringify(todo),
-        headers: { "Content-Type": "application/json" }
-    })
-    .then(res => res.json())
-}
+export const addTodoAPI = (todo) => {
+  return axios.post("https://jsonplaceholder.typicode.com/todos", todo)
+    .then(res => res.data);
+};
 
-export const deleteTodoAPI = function(id) {
-    return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
-        method: "DELETE"
-    })
-    .then(() => id)
-}
+export const updateTodoAPI = (todo) => {
+  return axios.put(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, todo)
+    .then(res => res.data);
+};
+
+export const deleteTodoAPI = (id) => {
+  return axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    .then(() => id);
+};
