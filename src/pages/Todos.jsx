@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { fetchTodos } from "../features/todos/todosSlice"
+import { fetchTodos } from "../Reducer/todosSlice.js";
 import AddTodoForm from "../components/AddTodoForm"
 import TodoList from "../components/TodoList"
 

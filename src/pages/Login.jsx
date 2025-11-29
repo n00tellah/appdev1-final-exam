@@ -10,7 +10,7 @@ export default function Login() {
   const SECRET = import.meta.env.VITE_APP_SECRET_PASSWORD;
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users?_limit=2")
+    fetch("https://jsonplaceholder.typicode.com/users?_limit=3")
       .then(response => response.json())
       .then(data => setUsers(data));
   }, []);
