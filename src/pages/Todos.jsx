@@ -4,7 +4,7 @@ import { fetchTodos } from "../features/todos/todosSlice"
 import AddTodoForm from "../components/AddTodoForm"
 import TodoList from "../components/TodoList"
 
-function Todos () {
+export default function Todos () {
     const dispatch = useDispatch()
     const todos = useSelector(state => state.todos.items)
 
@@ -91,5 +91,3 @@ function Todos () {
 
     )
 }
-
-export default Todos
