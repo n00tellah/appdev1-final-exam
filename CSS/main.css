@@ -70,10 +70,11 @@ body {
 /* Theme buttons div */
 .flexrow-container {
     align-items: center;
-    align-self: flex-end;
     display: flex;
     justify-content: space-around;
-    margin-right: 3%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .theme-selector {
