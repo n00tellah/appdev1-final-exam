@@ -39,6 +39,24 @@ body {
     width: 100%;
 }
 
+#datetime {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.version > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.version > div:nth-child(2) p {
+    text-align: center;
+    margin: 0;
+}
+
 #header {
     align-items: center;
     display: flex;
@@ -91,29 +109,30 @@ body {
 /* Animation */
 #title {
     border-right: solid 3px rgba(0, 0, 0, 0.75);
-    white-space: pre;
+    white-space: nowrap;
     overflow: hidden;     
     letter-spacing: 0.20rem;
     margin-top: 50px;
     margin-bottom: 20px;
+    width: 0;
     max-width: 480px;
   }
   
   /* Animation */
 #title {
-    animation: animated-text 2s steps(11,end) 0.5s 1 normal both,
-        animated-cursor 750ms steps(11,end) infinite;
+    animation: animated-text 3s steps(13,end) 0.5s 1 normal both,
+        animated-cursor 750ms steps(13,end) infinite;
   }
 
 #title.darker-title {
-    animation: animated-text 2s steps(11,end) 0.5s 1 normal both, darker-animated-cursor 750ms steps(11,end) infinite;
+    animation: animated-text 3s steps(13,end) 0.5s 1 normal both, darker-animated-cursor 750ms steps(13,end) infinite;
 }
   
   /* text animation */
   
   @keyframes animated-text{
-    from{width: 0%;}
-    to{width: 480px;}
+    from{width: 0;}
+    to{width: 13ch;}
   }
   
   /* cursor animations */
